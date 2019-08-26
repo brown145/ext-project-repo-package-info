@@ -1,0 +1,17 @@
+{
+	"name": "BitBucket Script Info",
+	"content_scripts": [{
+		"matches": ["https://whsbitbucket.webmd.net/*"],
+		"js": ["content.bundle.js"]
+	}],
+	"options_page": "options.html",
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"storage"
+	],
+	"icons": {},
+	"manifest_version": 2,
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

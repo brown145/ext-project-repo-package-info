@@ -1,0 +1,29 @@
+{
+  "name": "bitbucket-script-stats",
+  "version": "1.0.0",
+  "description": "show info for scripts used in other projects",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.common.js  --env.mode development",
+    "watch": "webpack --config webpack.common.js  --env.mode development --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "sanitize.css": "^11.0.0",
+    "style-loader": "^1.0.0",
+    "svelte": "^3.7.0",
+    "svelte-loader": "^2.13.6",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}

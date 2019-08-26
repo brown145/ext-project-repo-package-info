@@ -1,0 +1,1942 @@
+{
+   "repoScripts":{
+      "ids":[
+         "ui-chat",
+         "ui-cm",
+         "ui-connectioncenter",
+         "ui-contact-us"
+      ],
+      "values":{
+         "ui-chat":{
+            "id":"ui-chat",
+            "names":[
+               "local",
+               "build",
+               "lint"
+            ],
+            "commands":[
+               "underlord nodemon --harmony . --port 10095 --monolith-target https://localhost:4103 --devHostPort 1337 --urlPrefix /!chat --logFolder .",
+               "grunt build",
+               "grunt lint"
+            ]
+         },
+         "ui-cm":{
+            "id":"ui-cm",
+            "names":[
+               "start",
+               "dev-start-nginx-localblue",
+               "dev-start-nginx-localgold",
+               "dev-start-live",
+               "dev-start-stage",
+               "dev-start-testblue",
+               "dev-start-testgold",
+               "dev-start-devblue",
+               "dev-start-devgold",
+               "dev-start-gems",
+               "dev-start-localblue",
+               "dev-start-localgold",
+               "inspect",
+               "inspect-localblue",
+               "inspect-localgold",
+               "inspect-devblue",
+               "inspect-devgold",
+               "inspect-gems",
+               "inspect-stage",
+               "inspect-live",
+               "test",
+               "test-admin",
+               "test-tpv",
+               "test:coverage",
+               "test-admin:coverage",
+               "test-tpv:coverage",
+               "test-jenkins",
+               "test-admin-jenkins",
+               "test-tpv-jenkins",
+               "test:watch",
+               "test-admin:watch",
+               "test-tpv:watch",
+               "test-selenium",
+               "webpack",
+               "build",
+               "build-admin",
+               "build-tpv",
+               "dev-app",
+               "dev-admin",
+               "dev-tpv",
+               "lint-app",
+               "lint-admin",
+               "lint-tpv",
+               "storybook",
+               "build-storybook"
+            ],
+            "commands":[
+               "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 8090 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target",
+               "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4103",
+               "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4303",
+               "npm run start -- https://www.webmdhealth.com",
+               "npm run start -- https://staging.webmdhealth.com",
+               "npm run start -- https://www.blue.test.webmdhealth.com",
+               "npm run start -- https://www.gold.test.webmdhealth.com",
+               "npm run start -- https://www.blue.dev.webmdhealth.com",
+               "npm run start -- https://www.gold.dev.webmdhealth.com",
+               "npm run start -- https://gems.blue.dev.webmdhealth.com",
+               "npm run start -- https://localhost:4103",
+               "npm run start -- https://localhost:4303",
+               "underlord node-debug . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!cm --logFolder .. --monolith-target",
+               "npm run inspect -- https://localhost:4103",
+               "npm run inspect -- https://localhost:4303",
+               "npm run inspect -- https://www.blue.dev.webmdhealth.com",
+               "npm run inspect -- https://www.gold.dev.webmdhealth.com",
+               "npm run inspect -- https://gems.blue.dev.webmdhealth.com",
+               "npm run inspect -- https://staging.webmdhealth.com",
+               "npm run inspect -- https://www.webmdhealth.com",
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive",
+               "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --recursive ./admin/test/**/**.tests.js",
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive ./third-party-view/test/**/*.tests.js",
+               "nyc npm test",
+               "nyc npm run test-admin",
+               "nyc npm run test-tpv",
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-app.xml",
+               "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --no-colors --recursive ./admin/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-admin.xml",
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive ./third-party-view/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-tpv.xml",
+               "npm run test -- --watch-extensions json,jsx --watch",
+               "npm run test-admin -- --watch-extensions json,jsx --watch",
+               "npm run test-tpv -- --watch-extensions json,jsx --watch",
+               "powershell -noexit ./automation/WebMD.ConditionManagement.Automation/Run-CMAutomation.ps1",
+               "webpack --config webpack/webpack.config.js",
+               "npm run lint-app && npm run webpack -- -p --env.env=prod --env.target=app",
+               "npm run lint-admin && npm run webpack -- -p --env.env=prod --env.target=admin",
+               "npm run lint-tpv && npm run webpack -- -p --env.env=prod --env.target=tpv",
+               "npm run webpack -- --env.env=dev --env.target=app --colors --progress",
+               "npm run webpack -- --env.env=dev --env.target=admin --colors --progress",
+               "npm run webpack -- --env.env=dev --env.target=tpv --colors --progress",
+               "eslint --ext .js --ext .jsx -f checkstyle src/ > .output/checkstyles-app.xml",
+               "eslint --ext .js --ext .jsx -f checkstyle admin/src/ > .output/checkstyles-admin.xml",
+               "eslint --ext .js --ext .jsx -f checkstyle third-party-view/src/ --ignore-pattern third-party-view/src/public/ > .output/checkstyles-tpv.xml",
+               "start-storybook -p 6006",
+               "build-storybook"
+            ]
+         },
+         "ui-connectioncenter":{
+            "id":"ui-connectioncenter",
+            "names":[
+               "start",
+               "dev-start-offline",
+               "dev-start-live",
+               "dev-start-stage",
+               "dev-start-testa",
+               "dev-start-testc",
+               "dev-start-deva",
+               "dev-start-devc",
+               "dev-start-locala",
+               "dev-start-localb",
+               "dev-start-localc",
+               "dev-start-mendieta",
+               "inspect",
+               "inspect-locala",
+               "inspect-localb",
+               "inspect-localc",
+               "inspect-deva",
+               "inspect-devc",
+               "inspect-test",
+               "inspect-stage",
+               "inspect-live",
+               "build",
+               "test"
+            ],
+            "commands":[
+               "underlord nodemon --watch ./lib --watch . --ext js --harmony . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder . --monolith-target",
+               "npm run start http://localhost:1234",
+               "npm run start -- https://www.webmdhealth.com",
+               "npm run start https://staging.webmdhealth.com",
+               "npm run start https://www.blue.test.webmdhealth.com",
+               "npm run start https://www.gold.test.webmdhealth.com",
+               "npm run start https://www.blue.dev.webmdhealth.com",
+               "npm run start https://www.gold.dev.webmdhealth.com",
+               "npm run start https://localhost:4103",
+               "npm run start https://localhost:4203",
+               "npm run start https://localhost:4303",
+               "npm run start http://mend01d-whs-04.dev.webmd.com",
+               "underlord node-debug .. --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder .. --monolith-target",
+               "npm run inspect https://localhost:4103",
+               "npm run inspect https://localhost:4203",
+               "npm run inspect https://localhost:4303",
+               "npm run inspect https://www.blue.dev.webmdhealth.com",
+               "npm run inspect https://www.gold.dev.webmdhealth.com",
+               "npm run inspect https://www.a.test.webmdhealth.com",
+               "npm run inspect https://staging.webmdhealth.com",
+               "npm run inspect https://www.webmdhealth.com",
+               "grunt build",
+               "mocha"
+            ]
+         },
+         "ui-contact-us":{
+            "id":"ui-contact-us",
+            "names":[
+               "check-node",
+               "prestart",
+               "start",
+               "local",
+               "start-localblue",
+               "start-localgold",
+               "start-devgold",
+               "start-devblue",
+               "start-testgold",
+               "start-live",
+               "clean",
+               "clean-webpack-cruft",
+               "prewatch",
+               "watch",
+               "prebuild",
+               "build",
+               "postbuild",
+               "prebuild-debug",
+               "build-debug",
+               "pretest",
+               "test",
+               "test:jenkins",
+               "pretest-watch",
+               "test-watch"
+            ],
+            "commands":[
+               "check-node-version --package",
+               "npm run check-node",
+               "nodemon --watch ./src/Server --ext js --harmony ./src/server/server.js --port 10108 --urlPrefix /!contact-us --logFolder ./ --monolith-target",
+               "npm run start-localblue",
+               "npm run start -- https://localhost:4103",
+               "npm run start -- https://localhost:4303",
+               "npm run start -- https://www.gold.dev.webmdhealth.com",
+               "npm run start -- https://www.blue.dev.webmdhealth.com",
+               "npm run start -- https://www.gold.test.webmdhealth.com",
+               "npm run start -- https://www.webmdhealth.com",
+               "rimraf ./dist/**/* ./.output/**/*",
+               "rimraf ./node_modules/.cache/**/*",
+               "npm run check-node && npm run clean",
+               "webpack --watch --mode development",
+               "npm run check-node && npm run clean",
+               "webpack --mode production",
+               "npm run clean-webpack-cruft",
+               "npm run check-node && npm run clean",
+               "webpack --mode development && npm run test",
+               "npm run check-node",
+               "jest",
+               "npm test -- --no-colors --ci --no-cache --runInBand --bail",
+               "npm run check-node",
+               "jest --watch"
+            ]
+         }
+      }
+   },
+   "scriptNames":{
+      "ids":[
+         "local",
+         "build",
+         "lint",
+         "start",
+         "dev-start-nginx-localblue",
+         "dev-start-nginx-localgold",
+         "dev-start-live",
+         "dev-start-stage",
+         "dev-start-testblue",
+         "dev-start-testgold",
+         "dev-start-devblue",
+         "dev-start-devgold",
+         "dev-start-gems",
+         "dev-start-localblue",
+         "dev-start-localgold",
+         "inspect",
+         "inspect-localblue",
+         "inspect-localgold",
+         "inspect-devblue",
+         "inspect-devgold",
+         "inspect-gems",
+         "inspect-stage",
+         "inspect-live",
+         "test",
+         "test-admin",
+         "test-tpv",
+         "test:coverage",
+         "test-admin:coverage",
+         "test-tpv:coverage",
+         "test-jenkins",
+         "test-admin-jenkins",
+         "test-tpv-jenkins",
+         "test:watch",
+         "test-admin:watch",
+         "test-tpv:watch",
+         "test-selenium",
+         "webpack",
+         "build-admin",
+         "build-tpv",
+         "dev-app",
+         "dev-admin",
+         "dev-tpv",
+         "lint-app",
+         "lint-admin",
+         "lint-tpv",
+         "storybook",
+         "build-storybook",
+         "dev-start-offline",
+         "dev-start-testa",
+         "dev-start-testc",
+         "dev-start-deva",
+         "dev-start-devc",
+         "dev-start-locala",
+         "dev-start-localb",
+         "dev-start-localc",
+         "dev-start-mendieta",
+         "inspect-locala",
+         "inspect-localb",
+         "inspect-localc",
+         "inspect-deva",
+         "inspect-devc",
+         "inspect-test",
+         "check-node",
+         "prestart",
+         "start-localblue",
+         "start-localgold",
+         "start-devgold",
+         "start-devblue",
+         "start-testgold",
+         "start-live",
+         "clean",
+         "clean-webpack-cruft",
+         "prewatch",
+         "watch",
+         "prebuild",
+         "postbuild",
+         "prebuild-debug",
+         "build-debug",
+         "pretest",
+         "test:jenkins",
+         "pretest-watch",
+         "test-watch"
+      ],
+      "values":{
+         "local":{
+            "repoIds":[
+               "ui-chat",
+               "ui-contact-us"
+            ],
+            "commands":[
+               "underlord nodemon --harmony . --port 10095 --monolith-target https://localhost:4103 --devHostPort 1337 --urlPrefix /!chat --logFolder .",
+               "npm run start-localblue"
+            ],
+            "id":"local"
+         },
+         "build":{
+            "repoIds":[
+               "ui-chat",
+               "ui-cm",
+               "ui-connectioncenter",
+               "ui-contact-us"
+            ],
+            "commands":[
+               "grunt build",
+               "npm run lint-app && npm run webpack -- -p --env.env=prod --env.target=app",
+               "grunt build",
+               "webpack --mode production"
+            ],
+            "id":"build"
+         },
+         "lint":{
+            "repoIds":[
+               "ui-chat"
+            ],
+            "commands":[
+               "grunt lint"
+            ],
+            "id":"lint"
+         },
+         "start":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter",
+               "ui-contact-us"
+            ],
+            "commands":[
+               "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 8090 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target",
+               "underlord nodemon --watch ./lib --watch . --ext js --harmony . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder . --monolith-target",
+               "nodemon --watch ./src/Server --ext js --harmony ./src/server/server.js --port 10108 --urlPrefix /!contact-us --logFolder ./ --monolith-target"
+            ],
+            "id":"start"
+         },
+         "dev-start-nginx-localblue":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4103"
+            ],
+            "id":"dev-start-nginx-localblue"
+         },
+         "dev-start-nginx-localgold":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4303"
+            ],
+            "id":"dev-start-nginx-localgold"
+         },
+         "dev-start-live":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start -- https://www.webmdhealth.com",
+               "npm run start -- https://www.webmdhealth.com"
+            ],
+            "id":"dev-start-live"
+         },
+         "dev-start-stage":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start -- https://staging.webmdhealth.com",
+               "npm run start https://staging.webmdhealth.com"
+            ],
+            "id":"dev-start-stage"
+         },
+         "dev-start-testblue":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run start -- https://www.blue.test.webmdhealth.com"
+            ],
+            "id":"dev-start-testblue"
+         },
+         "dev-start-testgold":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run start -- https://www.gold.test.webmdhealth.com"
+            ],
+            "id":"dev-start-testgold"
+         },
+         "dev-start-devblue":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run start -- https://www.blue.dev.webmdhealth.com"
+            ],
+            "id":"dev-start-devblue"
+         },
+         "dev-start-devgold":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run start -- https://www.gold.dev.webmdhealth.com"
+            ],
+            "id":"dev-start-devgold"
+         },
+         "dev-start-gems":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run start -- https://gems.blue.dev.webmdhealth.com"
+            ],
+            "id":"dev-start-gems"
+         },
+         "dev-start-localblue":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run start -- https://localhost:4103"
+            ],
+            "id":"dev-start-localblue"
+         },
+         "dev-start-localgold":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run start -- https://localhost:4303"
+            ],
+            "id":"dev-start-localgold"
+         },
+         "inspect":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "underlord node-debug . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!cm --logFolder .. --monolith-target",
+               "underlord node-debug .. --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder .. --monolith-target"
+            ],
+            "id":"inspect"
+         },
+         "inspect-localblue":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run inspect -- https://localhost:4103"
+            ],
+            "id":"inspect-localblue"
+         },
+         "inspect-localgold":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run inspect -- https://localhost:4303"
+            ],
+            "id":"inspect-localgold"
+         },
+         "inspect-devblue":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run inspect -- https://www.blue.dev.webmdhealth.com"
+            ],
+            "id":"inspect-devblue"
+         },
+         "inspect-devgold":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run inspect -- https://www.gold.dev.webmdhealth.com"
+            ],
+            "id":"inspect-devgold"
+         },
+         "inspect-gems":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run inspect -- https://gems.blue.dev.webmdhealth.com"
+            ],
+            "id":"inspect-gems"
+         },
+         "inspect-stage":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect -- https://staging.webmdhealth.com",
+               "npm run inspect https://staging.webmdhealth.com"
+            ],
+            "id":"inspect-stage"
+         },
+         "inspect-live":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect -- https://www.webmdhealth.com",
+               "npm run inspect https://www.webmdhealth.com"
+            ],
+            "id":"inspect-live"
+         },
+         "test":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter",
+               "ui-contact-us"
+            ],
+            "commands":[
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive",
+               "mocha",
+               "jest"
+            ],
+            "id":"test"
+         },
+         "test-admin":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --recursive ./admin/test/**/**.tests.js"
+            ],
+            "id":"test-admin"
+         },
+         "test-tpv":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive ./third-party-view/test/**/*.tests.js"
+            ],
+            "id":"test-tpv"
+         },
+         "test:coverage":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "nyc npm test"
+            ],
+            "id":"test:coverage"
+         },
+         "test-admin:coverage":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "nyc npm run test-admin"
+            ],
+            "id":"test-admin:coverage"
+         },
+         "test-tpv:coverage":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "nyc npm run test-tpv"
+            ],
+            "id":"test-tpv:coverage"
+         },
+         "test-jenkins":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-app.xml"
+            ],
+            "id":"test-jenkins"
+         },
+         "test-admin-jenkins":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --no-colors --recursive ./admin/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-admin.xml"
+            ],
+            "id":"test-admin-jenkins"
+         },
+         "test-tpv-jenkins":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive ./third-party-view/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-tpv.xml"
+            ],
+            "id":"test-tpv-jenkins"
+         },
+         "test:watch":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run test -- --watch-extensions json,jsx --watch"
+            ],
+            "id":"test:watch"
+         },
+         "test-admin:watch":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run test-admin -- --watch-extensions json,jsx --watch"
+            ],
+            "id":"test-admin:watch"
+         },
+         "test-tpv:watch":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run test-tpv -- --watch-extensions json,jsx --watch"
+            ],
+            "id":"test-tpv:watch"
+         },
+         "test-selenium":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "powershell -noexit ./automation/WebMD.ConditionManagement.Automation/Run-CMAutomation.ps1"
+            ],
+            "id":"test-selenium"
+         },
+         "webpack":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "webpack --config webpack/webpack.config.js"
+            ],
+            "id":"webpack"
+         },
+         "build-admin":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run lint-admin && npm run webpack -- -p --env.env=prod --env.target=admin"
+            ],
+            "id":"build-admin"
+         },
+         "build-tpv":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run lint-tpv && npm run webpack -- -p --env.env=prod --env.target=tpv"
+            ],
+            "id":"build-tpv"
+         },
+         "dev-app":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run webpack -- --env.env=dev --env.target=app --colors --progress"
+            ],
+            "id":"dev-app"
+         },
+         "dev-admin":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run webpack -- --env.env=dev --env.target=admin --colors --progress"
+            ],
+            "id":"dev-admin"
+         },
+         "dev-tpv":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "npm run webpack -- --env.env=dev --env.target=tpv --colors --progress"
+            ],
+            "id":"dev-tpv"
+         },
+         "lint-app":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "eslint --ext .js --ext .jsx -f checkstyle src/ > .output/checkstyles-app.xml"
+            ],
+            "id":"lint-app"
+         },
+         "lint-admin":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "eslint --ext .js --ext .jsx -f checkstyle admin/src/ > .output/checkstyles-admin.xml"
+            ],
+            "id":"lint-admin"
+         },
+         "lint-tpv":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "eslint --ext .js --ext .jsx -f checkstyle third-party-view/src/ --ignore-pattern third-party-view/src/public/ > .output/checkstyles-tpv.xml"
+            ],
+            "id":"lint-tpv"
+         },
+         "storybook":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "start-storybook -p 6006"
+            ],
+            "id":"storybook"
+         },
+         "build-storybook":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "commands":[
+               "build-storybook"
+            ],
+            "id":"build-storybook"
+         },
+         "dev-start-offline":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start http://localhost:1234"
+            ],
+            "id":"dev-start-offline"
+         },
+         "dev-start-testa":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start https://www.blue.test.webmdhealth.com"
+            ],
+            "id":"dev-start-testa"
+         },
+         "dev-start-testc":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start https://www.gold.test.webmdhealth.com"
+            ],
+            "id":"dev-start-testc"
+         },
+         "dev-start-deva":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start https://www.blue.dev.webmdhealth.com"
+            ],
+            "id":"dev-start-deva"
+         },
+         "dev-start-devc":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start https://www.gold.dev.webmdhealth.com"
+            ],
+            "id":"dev-start-devc"
+         },
+         "dev-start-locala":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start https://localhost:4103"
+            ],
+            "id":"dev-start-locala"
+         },
+         "dev-start-localb":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start https://localhost:4203"
+            ],
+            "id":"dev-start-localb"
+         },
+         "dev-start-localc":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start https://localhost:4303"
+            ],
+            "id":"dev-start-localc"
+         },
+         "dev-start-mendieta":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run start http://mend01d-whs-04.dev.webmd.com"
+            ],
+            "id":"dev-start-mendieta"
+         },
+         "inspect-locala":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect https://localhost:4103"
+            ],
+            "id":"inspect-locala"
+         },
+         "inspect-localb":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect https://localhost:4203"
+            ],
+            "id":"inspect-localb"
+         },
+         "inspect-localc":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect https://localhost:4303"
+            ],
+            "id":"inspect-localc"
+         },
+         "inspect-deva":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect https://www.blue.dev.webmdhealth.com"
+            ],
+            "id":"inspect-deva"
+         },
+         "inspect-devc":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect https://www.gold.dev.webmdhealth.com"
+            ],
+            "id":"inspect-devc"
+         },
+         "inspect-test":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "commands":[
+               "npm run inspect https://www.a.test.webmdhealth.com"
+            ],
+            "id":"inspect-test"
+         },
+         "check-node":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "check-node-version --package"
+            ],
+            "id":"check-node"
+         },
+         "prestart":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run check-node"
+            ],
+            "id":"prestart"
+         },
+         "start-localblue":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run start -- https://localhost:4103"
+            ],
+            "id":"start-localblue"
+         },
+         "start-localgold":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run start -- https://localhost:4303"
+            ],
+            "id":"start-localgold"
+         },
+         "start-devgold":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run start -- https://www.gold.dev.webmdhealth.com"
+            ],
+            "id":"start-devgold"
+         },
+         "start-devblue":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run start -- https://www.blue.dev.webmdhealth.com"
+            ],
+            "id":"start-devblue"
+         },
+         "start-testgold":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run start -- https://www.gold.test.webmdhealth.com"
+            ],
+            "id":"start-testgold"
+         },
+         "start-live":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run start -- https://www.webmdhealth.com"
+            ],
+            "id":"start-live"
+         },
+         "clean":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "rimraf ./dist/**/* ./.output/**/*"
+            ],
+            "id":"clean"
+         },
+         "clean-webpack-cruft":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "rimraf ./node_modules/.cache/**/*"
+            ],
+            "id":"clean-webpack-cruft"
+         },
+         "prewatch":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run check-node && npm run clean"
+            ],
+            "id":"prewatch"
+         },
+         "watch":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "webpack --watch --mode development"
+            ],
+            "id":"watch"
+         },
+         "prebuild":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run check-node && npm run clean"
+            ],
+            "id":"prebuild"
+         },
+         "postbuild":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run clean-webpack-cruft"
+            ],
+            "id":"postbuild"
+         },
+         "prebuild-debug":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run check-node && npm run clean"
+            ],
+            "id":"prebuild-debug"
+         },
+         "build-debug":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "webpack --mode development && npm run test"
+            ],
+            "id":"build-debug"
+         },
+         "pretest":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run check-node"
+            ],
+            "id":"pretest"
+         },
+         "test:jenkins":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm test -- --no-colors --ci --no-cache --runInBand --bail"
+            ],
+            "id":"test:jenkins"
+         },
+         "pretest-watch":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "npm run check-node"
+            ],
+            "id":"pretest-watch"
+         },
+         "test-watch":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "commands":[
+               "jest --watch"
+            ],
+            "id":"test-watch"
+         }
+      }
+   },
+   "scriptCommands":{
+      "ids":[
+         "underlord nodemon --harmony . --port 10095 --monolith-target https://localhost:4103 --devHostPort 1337 --urlPrefix /!chat --logFolder .",
+         "grunt build",
+         "grunt lint",
+         "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 8090 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target",
+         "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4103",
+         "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4303",
+         "npm run start -- https://www.webmdhealth.com",
+         "npm run start -- https://staging.webmdhealth.com",
+         "npm run start -- https://www.blue.test.webmdhealth.com",
+         "npm run start -- https://www.gold.test.webmdhealth.com",
+         "npm run start -- https://www.blue.dev.webmdhealth.com",
+         "npm run start -- https://www.gold.dev.webmdhealth.com",
+         "npm run start -- https://gems.blue.dev.webmdhealth.com",
+         "npm run start -- https://localhost:4103",
+         "npm run start -- https://localhost:4303",
+         "underlord node-debug . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!cm --logFolder .. --monolith-target",
+         "npm run inspect -- https://localhost:4103",
+         "npm run inspect -- https://localhost:4303",
+         "npm run inspect -- https://www.blue.dev.webmdhealth.com",
+         "npm run inspect -- https://www.gold.dev.webmdhealth.com",
+         "npm run inspect -- https://gems.blue.dev.webmdhealth.com",
+         "npm run inspect -- https://staging.webmdhealth.com",
+         "npm run inspect -- https://www.webmdhealth.com",
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive",
+         "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --recursive ./admin/test/**/**.tests.js",
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive ./third-party-view/test/**/*.tests.js",
+         "nyc npm test",
+         "nyc npm run test-admin",
+         "nyc npm run test-tpv",
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-app.xml",
+         "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --no-colors --recursive ./admin/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-admin.xml",
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive ./third-party-view/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-tpv.xml",
+         "npm run test -- --watch-extensions json,jsx --watch",
+         "npm run test-admin -- --watch-extensions json,jsx --watch",
+         "npm run test-tpv -- --watch-extensions json,jsx --watch",
+         "powershell -noexit ./automation/WebMD.ConditionManagement.Automation/Run-CMAutomation.ps1",
+         "webpack --config webpack/webpack.config.js",
+         "npm run lint-app && npm run webpack -- -p --env.env=prod --env.target=app",
+         "npm run lint-admin && npm run webpack -- -p --env.env=prod --env.target=admin",
+         "npm run lint-tpv && npm run webpack -- -p --env.env=prod --env.target=tpv",
+         "npm run webpack -- --env.env=dev --env.target=app --colors --progress",
+         "npm run webpack -- --env.env=dev --env.target=admin --colors --progress",
+         "npm run webpack -- --env.env=dev --env.target=tpv --colors --progress",
+         "eslint --ext .js --ext .jsx -f checkstyle src/ > .output/checkstyles-app.xml",
+         "eslint --ext .js --ext .jsx -f checkstyle admin/src/ > .output/checkstyles-admin.xml",
+         "eslint --ext .js --ext .jsx -f checkstyle third-party-view/src/ --ignore-pattern third-party-view/src/public/ > .output/checkstyles-tpv.xml",
+         "start-storybook -p 6006",
+         "build-storybook",
+         "underlord nodemon --watch ./lib --watch . --ext js --harmony . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder . --monolith-target",
+         "npm run start http://localhost:1234",
+         "npm run start https://staging.webmdhealth.com",
+         "npm run start https://www.blue.test.webmdhealth.com",
+         "npm run start https://www.gold.test.webmdhealth.com",
+         "npm run start https://www.blue.dev.webmdhealth.com",
+         "npm run start https://www.gold.dev.webmdhealth.com",
+         "npm run start https://localhost:4103",
+         "npm run start https://localhost:4203",
+         "npm run start https://localhost:4303",
+         "npm run start http://mend01d-whs-04.dev.webmd.com",
+         "underlord node-debug .. --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder .. --monolith-target",
+         "npm run inspect https://localhost:4103",
+         "npm run inspect https://localhost:4203",
+         "npm run inspect https://localhost:4303",
+         "npm run inspect https://www.blue.dev.webmdhealth.com",
+         "npm run inspect https://www.gold.dev.webmdhealth.com",
+         "npm run inspect https://www.a.test.webmdhealth.com",
+         "npm run inspect https://staging.webmdhealth.com",
+         "npm run inspect https://www.webmdhealth.com",
+         "mocha",
+         "check-node-version --package",
+         "npm run check-node",
+         "nodemon --watch ./src/Server --ext js --harmony ./src/server/server.js --port 10108 --urlPrefix /!contact-us --logFolder ./ --monolith-target",
+         "npm run start-localblue",
+         "rimraf ./dist/**/* ./.output/**/*",
+         "rimraf ./node_modules/.cache/**/*",
+         "npm run check-node && npm run clean",
+         "webpack --watch --mode development",
+         "webpack --mode production",
+         "npm run clean-webpack-cruft",
+         "webpack --mode development && npm run test",
+         "jest",
+         "npm test -- --no-colors --ci --no-cache --runInBand --bail",
+         "jest --watch"
+      ],
+      "values":{
+         "underlord nodemon --harmony . --port 10095 --monolith-target https://localhost:4103 --devHostPort 1337 --urlPrefix /!chat --logFolder .":{
+            "repoIds":[
+               "ui-chat"
+            ],
+            "names":[
+               "local"
+            ],
+            "id":"underlord nodemon --harmony . --port 10095 --monolith-target https://localhost:4103 --devHostPort 1337 --urlPrefix /!chat --logFolder ."
+         },
+         "grunt build":{
+            "repoIds":[
+               "ui-chat",
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "build",
+               "build"
+            ],
+            "id":"grunt build"
+         },
+         "grunt lint":{
+            "repoIds":[
+               "ui-chat"
+            ],
+            "names":[
+               "lint"
+            ],
+            "id":"grunt lint"
+         },
+         "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 8090 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "start"
+            ],
+            "id":"underlord nodemon --harmony ./ --pagerDutyEnabled false --port 8090 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target"
+         },
+         "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4103":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-start-nginx-localblue"
+            ],
+            "id":"underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4103"
+         },
+         "underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4303":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-start-nginx-localgold"
+            ],
+            "id":"underlord nodemon --harmony ./ --pagerDutyEnabled false --port 10100 --devHostPort 1337 --urlPrefix /!cm --logFolder ./ --monolith-target https://localhost:4303"
+         },
+         "npm run start -- https://www.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm",
+               "ui-connectioncenter",
+               "ui-contact-us"
+            ],
+            "names":[
+               "dev-start-live",
+               "dev-start-live",
+               "start-live"
+            ],
+            "id":"npm run start -- https://www.webmdhealth.com"
+         },
+         "npm run start -- https://staging.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-start-stage"
+            ],
+            "id":"npm run start -- https://staging.webmdhealth.com"
+         },
+         "npm run start -- https://www.blue.test.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-start-testblue"
+            ],
+            "id":"npm run start -- https://www.blue.test.webmdhealth.com"
+         },
+         "npm run start -- https://www.gold.test.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm",
+               "ui-contact-us"
+            ],
+            "names":[
+               "dev-start-testgold",
+               "start-testgold"
+            ],
+            "id":"npm run start -- https://www.gold.test.webmdhealth.com"
+         },
+         "npm run start -- https://www.blue.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm",
+               "ui-contact-us"
+            ],
+            "names":[
+               "dev-start-devblue",
+               "start-devblue"
+            ],
+            "id":"npm run start -- https://www.blue.dev.webmdhealth.com"
+         },
+         "npm run start -- https://www.gold.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm",
+               "ui-contact-us"
+            ],
+            "names":[
+               "dev-start-devgold",
+               "start-devgold"
+            ],
+            "id":"npm run start -- https://www.gold.dev.webmdhealth.com"
+         },
+         "npm run start -- https://gems.blue.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-start-gems"
+            ],
+            "id":"npm run start -- https://gems.blue.dev.webmdhealth.com"
+         },
+         "npm run start -- https://localhost:4103":{
+            "repoIds":[
+               "ui-cm",
+               "ui-contact-us"
+            ],
+            "names":[
+               "dev-start-localblue",
+               "start-localblue"
+            ],
+            "id":"npm run start -- https://localhost:4103"
+         },
+         "npm run start -- https://localhost:4303":{
+            "repoIds":[
+               "ui-cm",
+               "ui-contact-us"
+            ],
+            "names":[
+               "dev-start-localgold",
+               "start-localgold"
+            ],
+            "id":"npm run start -- https://localhost:4303"
+         },
+         "underlord node-debug . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!cm --logFolder .. --monolith-target":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect"
+            ],
+            "id":"underlord node-debug . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!cm --logFolder .. --monolith-target"
+         },
+         "npm run inspect -- https://localhost:4103":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect-localblue"
+            ],
+            "id":"npm run inspect -- https://localhost:4103"
+         },
+         "npm run inspect -- https://localhost:4303":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect-localgold"
+            ],
+            "id":"npm run inspect -- https://localhost:4303"
+         },
+         "npm run inspect -- https://www.blue.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect-devblue"
+            ],
+            "id":"npm run inspect -- https://www.blue.dev.webmdhealth.com"
+         },
+         "npm run inspect -- https://www.gold.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect-devgold"
+            ],
+            "id":"npm run inspect -- https://www.gold.dev.webmdhealth.com"
+         },
+         "npm run inspect -- https://gems.blue.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect-gems"
+            ],
+            "id":"npm run inspect -- https://gems.blue.dev.webmdhealth.com"
+         },
+         "npm run inspect -- https://staging.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect-stage"
+            ],
+            "id":"npm run inspect -- https://staging.webmdhealth.com"
+         },
+         "npm run inspect -- https://www.webmdhealth.com":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "inspect-live"
+            ],
+            "id":"npm run inspect -- https://www.webmdhealth.com"
+         },
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test"
+            ],
+            "id":"mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive"
+         },
+         "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --recursive ./admin/test/**/**.tests.js":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-admin"
+            ],
+            "id":"mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --recursive ./admin/test/**/**.tests.js"
+         },
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive ./third-party-view/test/**/*.tests.js":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-tpv"
+            ],
+            "id":"mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --recursive ./third-party-view/test/**/*.tests.js"
+         },
+         "nyc npm test":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test:coverage"
+            ],
+            "id":"nyc npm test"
+         },
+         "nyc npm run test-admin":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-admin:coverage"
+            ],
+            "id":"nyc npm run test-admin"
+         },
+         "nyc npm run test-tpv":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-tpv:coverage"
+            ],
+            "id":"nyc npm run test-tpv"
+         },
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-app.xml":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-jenkins"
+            ],
+            "id":"mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-app.xml"
+         },
+         "mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --no-colors --recursive ./admin/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-admin.xml":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-admin-jenkins"
+            ],
+            "id":"mocha --compilers js:babel-core/register --require ./admin/test/fixtures/setup.fixture.js --no-colors --recursive ./admin/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-admin.xml"
+         },
+         "mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive ./third-party-view/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-tpv.xml":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-tpv-jenkins"
+            ],
+            "id":"mocha --compilers js:babel-core/register --require ./test/fixtures/setup.fixture.js --no-colors --recursive ./third-party-view/test/**/**.tests.js --reporter mocha-jenkins-reporter --reporter-options junit_report_path=.output/mocha-unit-tpv.xml"
+         },
+         "npm run test -- --watch-extensions json,jsx --watch":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test:watch"
+            ],
+            "id":"npm run test -- --watch-extensions json,jsx --watch"
+         },
+         "npm run test-admin -- --watch-extensions json,jsx --watch":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-admin:watch"
+            ],
+            "id":"npm run test-admin -- --watch-extensions json,jsx --watch"
+         },
+         "npm run test-tpv -- --watch-extensions json,jsx --watch":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-tpv:watch"
+            ],
+            "id":"npm run test-tpv -- --watch-extensions json,jsx --watch"
+         },
+         "powershell -noexit ./automation/WebMD.ConditionManagement.Automation/Run-CMAutomation.ps1":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "test-selenium"
+            ],
+            "id":"powershell -noexit ./automation/WebMD.ConditionManagement.Automation/Run-CMAutomation.ps1"
+         },
+         "webpack --config webpack/webpack.config.js":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "webpack"
+            ],
+            "id":"webpack --config webpack/webpack.config.js"
+         },
+         "npm run lint-app && npm run webpack -- -p --env.env=prod --env.target=app":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "build"
+            ],
+            "id":"npm run lint-app && npm run webpack -- -p --env.env=prod --env.target=app"
+         },
+         "npm run lint-admin && npm run webpack -- -p --env.env=prod --env.target=admin":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "build-admin"
+            ],
+            "id":"npm run lint-admin && npm run webpack -- -p --env.env=prod --env.target=admin"
+         },
+         "npm run lint-tpv && npm run webpack -- -p --env.env=prod --env.target=tpv":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "build-tpv"
+            ],
+            "id":"npm run lint-tpv && npm run webpack -- -p --env.env=prod --env.target=tpv"
+         },
+         "npm run webpack -- --env.env=dev --env.target=app --colors --progress":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-app"
+            ],
+            "id":"npm run webpack -- --env.env=dev --env.target=app --colors --progress"
+         },
+         "npm run webpack -- --env.env=dev --env.target=admin --colors --progress":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-admin"
+            ],
+            "id":"npm run webpack -- --env.env=dev --env.target=admin --colors --progress"
+         },
+         "npm run webpack -- --env.env=dev --env.target=tpv --colors --progress":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "dev-tpv"
+            ],
+            "id":"npm run webpack -- --env.env=dev --env.target=tpv --colors --progress"
+         },
+         "eslint --ext .js --ext .jsx -f checkstyle src/ > .output/checkstyles-app.xml":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "lint-app"
+            ],
+            "id":"eslint --ext .js --ext .jsx -f checkstyle src/ > .output/checkstyles-app.xml"
+         },
+         "eslint --ext .js --ext .jsx -f checkstyle admin/src/ > .output/checkstyles-admin.xml":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "lint-admin"
+            ],
+            "id":"eslint --ext .js --ext .jsx -f checkstyle admin/src/ > .output/checkstyles-admin.xml"
+         },
+         "eslint --ext .js --ext .jsx -f checkstyle third-party-view/src/ --ignore-pattern third-party-view/src/public/ > .output/checkstyles-tpv.xml":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "lint-tpv"
+            ],
+            "id":"eslint --ext .js --ext .jsx -f checkstyle third-party-view/src/ --ignore-pattern third-party-view/src/public/ > .output/checkstyles-tpv.xml"
+         },
+         "start-storybook -p 6006":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "storybook"
+            ],
+            "id":"start-storybook -p 6006"
+         },
+         "build-storybook":{
+            "repoIds":[
+               "ui-cm"
+            ],
+            "names":[
+               "build-storybook"
+            ],
+            "id":"build-storybook"
+         },
+         "underlord nodemon --watch ./lib --watch . --ext js --harmony . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder . --monolith-target":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "start"
+            ],
+            "id":"underlord nodemon --watch ./lib --watch . --ext js --harmony . --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder . --monolith-target"
+         },
+         "npm run start http://localhost:1234":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-offline"
+            ],
+            "id":"npm run start http://localhost:1234"
+         },
+         "npm run start https://staging.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-stage"
+            ],
+            "id":"npm run start https://staging.webmdhealth.com"
+         },
+         "npm run start https://www.blue.test.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-testa"
+            ],
+            "id":"npm run start https://www.blue.test.webmdhealth.com"
+         },
+         "npm run start https://www.gold.test.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-testc"
+            ],
+            "id":"npm run start https://www.gold.test.webmdhealth.com"
+         },
+         "npm run start https://www.blue.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-deva"
+            ],
+            "id":"npm run start https://www.blue.dev.webmdhealth.com"
+         },
+         "npm run start https://www.gold.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-devc"
+            ],
+            "id":"npm run start https://www.gold.dev.webmdhealth.com"
+         },
+         "npm run start https://localhost:4103":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-locala"
+            ],
+            "id":"npm run start https://localhost:4103"
+         },
+         "npm run start https://localhost:4203":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-localb"
+            ],
+            "id":"npm run start https://localhost:4203"
+         },
+         "npm run start https://localhost:4303":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-localc"
+            ],
+            "id":"npm run start https://localhost:4303"
+         },
+         "npm run start http://mend01d-whs-04.dev.webmd.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "dev-start-mendieta"
+            ],
+            "id":"npm run start http://mend01d-whs-04.dev.webmd.com"
+         },
+         "underlord node-debug .. --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder .. --monolith-target":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect"
+            ],
+            "id":"underlord node-debug .. --pagerDutyEnabled false --port 8091 --devHostPort 1337 --urlPrefix /!ConnectionCenter --logFolder .. --monolith-target"
+         },
+         "npm run inspect https://localhost:4103":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-locala"
+            ],
+            "id":"npm run inspect https://localhost:4103"
+         },
+         "npm run inspect https://localhost:4203":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-localb"
+            ],
+            "id":"npm run inspect https://localhost:4203"
+         },
+         "npm run inspect https://localhost:4303":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-localc"
+            ],
+            "id":"npm run inspect https://localhost:4303"
+         },
+         "npm run inspect https://www.blue.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-deva"
+            ],
+            "id":"npm run inspect https://www.blue.dev.webmdhealth.com"
+         },
+         "npm run inspect https://www.gold.dev.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-devc"
+            ],
+            "id":"npm run inspect https://www.gold.dev.webmdhealth.com"
+         },
+         "npm run inspect https://www.a.test.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-test"
+            ],
+            "id":"npm run inspect https://www.a.test.webmdhealth.com"
+         },
+         "npm run inspect https://staging.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-stage"
+            ],
+            "id":"npm run inspect https://staging.webmdhealth.com"
+         },
+         "npm run inspect https://www.webmdhealth.com":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "inspect-live"
+            ],
+            "id":"npm run inspect https://www.webmdhealth.com"
+         },
+         "mocha":{
+            "repoIds":[
+               "ui-connectioncenter"
+            ],
+            "names":[
+               "test"
+            ],
+            "id":"mocha"
+         },
+         "check-node-version --package":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "check-node"
+            ],
+            "id":"check-node-version --package"
+         },
+         "npm run check-node":{
+            "repoIds":[
+               "ui-contact-us",
+               "ui-contact-us",
+               "ui-contact-us"
+            ],
+            "names":[
+               "prestart",
+               "pretest",
+               "pretest-watch"
+            ],
+            "id":"npm run check-node"
+         },
+         "nodemon --watch ./src/Server --ext js --harmony ./src/server/server.js --port 10108 --urlPrefix /!contact-us --logFolder ./ --monolith-target":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "start"
+            ],
+            "id":"nodemon --watch ./src/Server --ext js --harmony ./src/server/server.js --port 10108 --urlPrefix /!contact-us --logFolder ./ --monolith-target"
+         },
+         "npm run start-localblue":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "local"
+            ],
+            "id":"npm run start-localblue"
+         },
+         "rimraf ./dist/**/* ./.output/**/*":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "clean"
+            ],
+            "id":"rimraf ./dist/**/* ./.output/**/*"
+         },
+         "rimraf ./node_modules/.cache/**/*":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "clean-webpack-cruft"
+            ],
+            "id":"rimraf ./node_modules/.cache/**/*"
+         },
+         "npm run check-node && npm run clean":{
+            "repoIds":[
+               "ui-contact-us",
+               "ui-contact-us",
+               "ui-contact-us"
+            ],
+            "names":[
+               "prewatch",
+               "prebuild",
+               "prebuild-debug"
+            ],
+            "id":"npm run check-node && npm run clean"
+         },
+         "webpack --watch --mode development":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "watch"
+            ],
+            "id":"webpack --watch --mode development"
+         },
+         "webpack --mode production":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "build"
+            ],
+            "id":"webpack --mode production"
+         },
+         "npm run clean-webpack-cruft":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "postbuild"
+            ],
+            "id":"npm run clean-webpack-cruft"
+         },
+         "webpack --mode development && npm run test":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "build-debug"
+            ],
+            "id":"webpack --mode development && npm run test"
+         },
+         "jest":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "test"
+            ],
+            "id":"jest"
+         },
+         "npm test -- --no-colors --ci --no-cache --runInBand --bail":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "test:jenkins"
+            ],
+            "id":"npm test -- --no-colors --ci --no-cache --runInBand --bail"
+         },
+         "jest --watch":{
+            "repoIds":[
+               "ui-contact-us"
+            ],
+            "names":[
+               "test-watch"
+            ],
+            "id":"jest --watch"
+         }
+      }
+   }
+}
